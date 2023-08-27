@@ -1,4 +1,4 @@
-package co.com.rob.jpa;
+package co.com.rob.jpa.servlets;
 
 import java.io.*;
 import jakarta.servlet.http.*;
