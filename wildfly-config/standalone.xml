@@ -121,11 +121,17 @@
             <logger category="sun.rmi">
                 <level name="WARN"/>
             </logger>
-            <logger category="org.hibernate.SQL">
+            <logger category="org.hibernate.SQL" use-parent-handlers="true">
                 <level name="DEBUG"/>
+                <handlers>
+                    <handler name="CONSOLE"/>
+                </handlers>
             </logger>
-            <logger category="org.hibernate.type.descriptor.sql.BasicBinder">
+            <logger category="org.hibernate.type.descriptor.sql" use-parent-handlers="true">
                 <level name="TRACE"/>
+                <handlers>
+                    <handler name="CONSOLE"/>
+                </handlers>
             </logger>
             <root-logger>
                 <level name="INFO"/>
