@@ -22,7 +22,7 @@ public class InfoServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         System.out.println("****************************");
-        System.out.println("salida en consola");
+        System.out.println("salida en consola, version 2");
         PrintWriter printWriter = response.getWriter();
         response.setContentType("text/plain;charset=UTF-8");
         printWriter.print("User: ");

@@ -1,5 +1,6 @@
 package co.com.rob.jpa.db;
 
+import jakarta.annotation.PostConstruct;
 import jakarta.annotation.Resource;
 import jakarta.enterprise.context.ApplicationScoped;
 
@@ -12,10 +13,18 @@ import java.sql.SQLException;
 @ApplicationScoped
 public class DbInfo {
 
+
     @Resource(lookup = "java:/jdbc/personalBudgetDS")
     DataSource dataSource;
 
+    @PostConstruct
+    public void viendoQuePasa(){
+        System.out.println("***********justo antes de inyectarla");
+        System.out.println("datasource:"+dataSource);
+    }
+
     public String getVersion() {
+        System.out.println("******Entra *******");
         try (Connection connection = dataSource.getConnection();
              PreparedStatement ps = connection.prepareStatement("SELECT VERSION()");) {
             ResultSet resultSet = ps.executeQuery();
