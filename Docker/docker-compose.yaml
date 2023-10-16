@@ -1,0 +1,16 @@
+version: "3"
+services:
+    personal_budget-mysql:
+        image: mysql:8.0.25
+        ports:
+            - 3307:3306
+        environment:
+            - MYSQL_DATABASE=personal_budget
+            - MYSQL_USER=budget
+            - MYSQL_PASSWORD=budget
+            - MYSQL_ROOT_PASSWORD=root
+        volumes:
+            - personalBudget-mysql-data:/var/lib/mysql
+volumes:
+    personalBudget-mysql-data:
+        external: true
