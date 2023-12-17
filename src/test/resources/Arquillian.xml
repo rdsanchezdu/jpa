@@ -14,7 +14,7 @@
             <property name="jbossHome">C:\AppServers\wildfly-preview-22.0.0.Final</property>
             <property name="javaVmArguments">-Djboss.socket.binding.port-offset=100</property>
             <property name="managementPort">10090</property>
-            <property name="connectionTimeout">10000</property>
+            <property name="connectionTimeout">40000</property>
         </configuration>
     </container>
 

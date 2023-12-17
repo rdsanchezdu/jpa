@@ -18,6 +18,8 @@ public class InfoServlet extends HttpServlet {
     @Inject
     DbInfo dbInfo;
 
+
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

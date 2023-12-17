@@ -41,12 +41,12 @@
             <scope>provided</scope>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>javax.servlet</groupId>-->
-<!--            <artifactId>javax.servlet-api</artifactId>-->
-<!--            <version>4.0.1</version>-->
-<!--            <scope>provided</scope>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
 
         <!--hibernate-->
         <dependency>
@@ -58,12 +58,19 @@
         </dependency>
 
 <!--    Hibernate: problemas de compatibilidad de javax y jakarta-->
-<!--        <dependency>-->
-<!--            <groupId>javax.persistence</groupId>-->
-<!--            <artifactId>javax.persistence-api</artifactId>-->
-<!--            <version>2.2</version>-->
-<!--            <scope>provided</scope>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>javax.persistence-api</artifactId>
+            <version>2.2</version>
+            <scope>provided</scope>
+        </dependency>
+<!--    Hibernate: para crearle get y set a las entities-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
 <!--    TEST: para JTA de arquillian y hibernateDB-->
         <dependency>
             <groupId>org.jboss.arquillian.extension</groupId>
@@ -115,15 +122,17 @@
             <scope>test</scope>
         </dependency>
 
-<!--&lt;!&ndash;    TEST DB: Esta es para ser usada con Db rider&ndash;&gt;-->
+
+
+<!--    TEST: DB prefilled values-->
 <!--        <dependency>-->
-<!--            <groupId>org.projectlombok</groupId>-->
-<!--            <artifactId>lombok</artifactId>-->
-<!--            <version>${lombok.version}</version>-->
-<!--            <scope>provided</scope>-->
+<!--            <groupId>com.github.database-rider</groupId>-->
+<!--            <artifactId>rider-cdi</artifactId>-->
+<!--            <version>1.41.0</version>-->
+<!--            <scope>test</scope>-->
 <!--        </dependency>-->
 
-<!--&lt;!&ndash;    TEST: DB prefilled values&ndash;&gt;-->
+<!--    TEST: DB prefilled values-->
 <!--        <dependency>-->
 <!--            <groupId>com.github.database-rider</groupId>-->
 <!--            <artifactId>rider-junit5</artifactId>-->
@@ -148,6 +157,18 @@
 <!--                </exclusion>-->
 <!--            </exclusions>-->
 <!--        </dependency>-->
+
+<!--        logs-->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.20.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.20.0</version>
+        </dependency>
 
     </dependencies>
 
