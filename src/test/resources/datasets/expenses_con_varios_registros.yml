@@ -1,0 +1,17 @@
+expenses:
+  - id: 1
+    amount: 120.43
+    concept: "Lunch menu"
+    date : "2024-01-10"
+  - id: 2
+    amount: 545.7
+    concept: "Dinner menu"
+    date: "2023-12-01"
+  - id: 3
+    amount: 545.7
+    concept: "Dinner menu"
+    date: "2023-12-01"
+  - id: 4
+    amount: 333
+    concept: "Onces menu"
+    date: "2023-12-29"
